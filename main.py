@@ -102,10 +102,9 @@ def Qave(R):
 
 
 # pressure drop based on the average volumetric flow rate, Pn
+# ! maybe average volumetric flow rate is wrong for calculating pressure drop
 def Pn_func(Qn):
-    return (
-        Qn / ((8 * pi * R**3) / 8 * (R / (2 * K * Ln)) ** (1 / n) * (n / (3 * n + 1)))
-    ) ** n
+    return (Qn / (pi * R**3) / (n / (3 * n + 1))) ** n * 2 * K * Ln / R
 
 
 #############################################################################################
