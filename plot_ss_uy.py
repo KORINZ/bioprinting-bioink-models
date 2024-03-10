@@ -16,12 +16,15 @@ columns = [
 ]
 
 # Load the data from the file
-file_path = "data/line.xy"
+file_path = "data/2uLs.xy"
 data = pd.read_csv(file_path, delim_whitespace=True, comment="#", names=columns)
 
 # Assuming the shear stress and velocity might have negative values and need to be made absolute
 data["shearStress_xy"] = abs(data["shearStress_xy"])
 data["U_y"] = abs(data["U_y"])
+
+avg_u_y = data["U_y"].mean()
+print(f"{0.02/avg_u_y * 1000:.4f} ms")
 
 # Plotting
 fig, ax1 = plt.subplots(figsize=(10, 6))
