@@ -43,20 +43,20 @@ Ln = 20 * (10**-3)
 pressure_is_known = False
 if pressure_is_known:
     # pressure drop along the needle (input: kPa) [unit: Pa]
-    Pn = 110 * (10**3)
+    Pn = 800 * (10**3)
 else:
     # volumetric flow rate (input: micro-L/s) [unit: m^3/s]
-    Qn = 3 * (10**-9)
+    Qn = 1 * (10**-9)
 
 ###########################
 # bioink properties (power law)
 
 # consistency flow index [Pa*s^n]
-K = 27.88
+K = 86.73
 # K = 18.5
 
 # flow behavior index [-]
-n = 0.420
+n = 0.365
 # n = 0.51
 
 # percent weight/volume (% w/v)
