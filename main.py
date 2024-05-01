@@ -40,10 +40,10 @@ R = 100 * (10**-6)
 Ln = 20 * (10**-3)
 
 # pressure or flow rate is known
-pressure_is_known = False
+pressure_is_known = True
 if pressure_is_known:
     # pressure drop along the needle (input: kPa) [unit: Pa]
-    Pn = 800 * (10**3)
+    Pn = 1465.807 * (10**3)
 else:
     # volumetric flow rate (input: micro-L/s) [unit: m^3/s]
     Qn = 1 * (10**-9)
@@ -52,11 +52,11 @@ else:
 # bioink properties (power law)
 
 # consistency flow index [Pa*s^n]
-K = 86.73
+K = 160.630
 # K = 18.5
 
 # flow behavior index [-]
-n = 0.365
+n = 0.360
 # n = 0.51
 
 # percent weight/volume (% w/v)
@@ -67,7 +67,7 @@ n = 0.365
 # paraview csv file name (place file inside the same folder)
 # Paraview -> slice over needle cross-section -> plot over line -> set point 0 to be on the center -> save data as .csv
 data_file_name = "ss_data"  # do not put filename extension
-plot_graphs = False
+plot_graphs = True
 save_graphs = False
 dpi_save = 600
 #############################################################################################
